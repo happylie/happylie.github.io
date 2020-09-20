@@ -49,36 +49,10 @@
 
 </script>
 
-
-  
-
-    <script type="text/javascript" src="//t1.daumcdn.net/tiara/js/v1/tiara.min.js"></script>
-<script type="text/javascript">
-    if (typeof TiaraTracker !== 'undefined') {
-        TiaraTracker.getInstance().init({
-            svcDomain: window.location.hostname,
-            disableQuery: true,
-            enableHash: false,
-        });
-    }
-
-    window.Tiara = {
-        setSection: function(sectionName) {
-            if (typeof TiaraTracker === 'undefined') return;
-            TiaraTracker.getInstance().setSection(sectionName);
-        },
-        trackPage: function(pageId, actionName) {
-            if (typeof TiaraTracker === 'undefined') return;
-            actionName = typeof actionName === 'undefined' ? pageId : actionName;
-            TiaraTracker.getInstance()
-                .setPage(pageId)
-                .trackPage(actionName)
-                .track();
-        }
-    }
-</script>
-
   <script src="https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script>
+  
+  <script> function btn(){ alert('버튼이 클릭되었습니다'); } </script>
+
 </head>
 
 
@@ -1041,8 +1015,7 @@
       <p class="desc_error"></p>
     </div>
     <div class="wrap_btn">
-      <button class="btn_g btn_confirm submit" type="button" tabindex="3">로그인</button>
-      <script>alert(1)</script>
+      <button class="btn_g btn_confirm submit" onclick="javascript:btn()" tabindex="3">로그인</button>
         <span class="line_or"><span class="txt_or">또는</span></span>
         <button id="move_to_qr" class="btn_g" type="button" formaction="/qr_login?continue=https%3A%2F%2Flogins.daum.net%2Faccounts%2Fksso.do%3Frescue%3Dtrue%26url%3Dhttps%253A%252F%252Fwww.daum.net%252F" value="test" tabindex="4">
           <span class="ico_account ico_qr"></span>
